@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
 import IconButton from '@mui/material/IconButton'
 import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
+// import Grid from '@mui/material/Grid'
 // import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
@@ -82,7 +82,7 @@ const DashboardContent = (props) => {
   const toggleDrawer = () => {
     setOpen(!open)
   }
-
+console.log(props)
   return (
     <>
       <ThemeProvider theme={mdTheme}>
@@ -154,7 +154,7 @@ const DashboardContent = (props) => {
 
               {/* drilling the component into the page using props */}
 
-              {!props.Test ? <h1> noting to display </h1> : <props.Test />}
+              {!props.Test ? <h1> nothing to display </h1> : <props.Test />}
             </Container>
           </Box>
         </Box>
