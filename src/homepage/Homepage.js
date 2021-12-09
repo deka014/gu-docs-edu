@@ -1,10 +1,12 @@
 import React from 'react'
-import Navbar from '../navbar/Navbar'
+import Dashboard from '../Dashboard/Dashboard'
+import Test from './Test'
 
 function Homepage() {
   return (
     <div>
-      <Navbar></Navbar>
+      <Dashboard Test={Test}></Dashboard>
+      <h1>will this work</h1>
     </div>
   )
 }
