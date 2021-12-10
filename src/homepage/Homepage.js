@@ -6,7 +6,6 @@ function Homepage() {
   return (
     <div>
       <Dashboard Test={Test}></Dashboard>
-      <h1>will this work</h1>
     </div>
   )
 }
