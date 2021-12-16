@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useRef } from 'react'
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import MuiDrawer from '@mui/material/Drawer'
@@ -8,6 +9,7 @@ import Toolbar from '@mui/material/Toolbar'
 import List from '@mui/material/List'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
+import { Button } from '@mui/material'
 import IconButton from '@mui/material/IconButton'
 import Container from '@mui/material/Container'
 // import Grid from '@mui/material/Grid'
@@ -53,24 +55,13 @@ const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
   '& .MuiDrawer-paper': {
-    position: 'relative',
+    position: 'fixed',
     whiteSpace: 'nowrap',
     width: drawerWidth,
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
+    transition: 'transform 0.2s',
     boxSizing: 'border-box',
     ...(!open && {
-      overflowX: 'hidden',
-      transition: theme.transitions.create('width', {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-      }),
-      width: theme.spacing(7),
-      [theme.breakpoints.up('sm')]: {
-        width: theme.spacing(9),
-      },
+      transform: `translateX(-100%)`,
     }),
   },
 }))
@@ -82,13 +73,21 @@ const DashboardContent = (props) => {
   const toggleDrawer = () => {
     setOpen(!open)
   }
-console.log(props)
+  // const [category, setCategory] = React.useState('1st Semester')
+  // const refContainer = useRef('null')
+
+  console.log(props)
+
+  // const handleDashboardClick = (data) => {
+  //   setCategory(data)
+  // }
+
   return (
     <>
       <ThemeProvider theme={mdTheme}>
         <Box sx={{ display: 'flex' }}>
           <CssBaseline />
-          <AppBar position='absolute' open={open}>
+          <AppBar position='static' open={open}>
             <Toolbar
               sx={{
                 pr: '24px', // keep right padding when drawer closed
@@ -132,31 +131,15 @@ console.log(props)
               </IconButton>
             </Toolbar>
             <Divider />
-            <List>{mainListItems}</List>
+            <List onClick={(e) => props.semester(e.target.textContent)}>
+              {mainListItems}
+            </List>
             <Divider />
-            <List>{secondaryListItems}</List>
+            <List onClick={(e) => props.semester(e.target.textContent)}>
+              {secondaryListItems}
+              <Button>click me </Button>
+            </List>
           </Drawer>
-          <Box
-            component='main'
-            sx={{
-              backgroundColor: (theme) =>
-                theme.palette.mode === 'light'
-                  ? theme.palette.grey[100]
-                  : theme.palette.grey[900],
-              flexGrow: 1,
-              height: '100vh',
-              overflow: 'auto',
-            }}
-          >
-            <Toolbar />
-            <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}>
-              {/* <Grid container spacing={3}></Grid> */}
-
-              {/* drilling the component into the page using props */}
-
-              {!props.Test ? <h1> nothing to display </h1> : <props.Test />}
-            </Container>
-          </Box>
         </Box>
       </ThemeProvider>
     </>
