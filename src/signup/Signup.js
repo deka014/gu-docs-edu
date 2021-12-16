@@ -12,9 +12,13 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import { makeStyles } from '@mui/styles';
+import CardContent from '@mui/material/CardContent';
 
 
 const theme = createTheme();
+
 
 export default function SignUp() {
   const handleSubmit = (event) => {
@@ -27,6 +31,7 @@ export default function SignUp() {
     });
   };
 
+
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     padding: theme.spacing(1),
@@ -34,9 +39,39 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
+const useStyles = makeStyles({
+  root: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)'}
+});
+
+const classes = useStyles();
+
   return (
     <ThemeProvider theme={theme}>
-      {/* <Container component="main" maxWidth="xs">
+      
+  {/* Left Component */}
+
+<Grid container alignItems="stretch" justifyContent="center" marginTop="20vh">
+
+<Grid item component={Card} align="center" paddingY="15vh" justifyContent="center" backgroundImage='linear-gradient(to right bottom, #430089, #82ffa1)' className={classes.root}>
+  <CardContent sx={{maxWidth:420}} >
+
+  <Typography variant="h3" component="div" gutterBottom>
+          Welcome
+        </Typography>
+        <Typography variant="h6" component="div">
+          To get access to student materials
+          please signup and stay connected!
+        </Typography>
+  </CardContent>
+</Grid>
+
+
+{/* Right Component */}
+
+<Grid item component={Card} >
+  <CardContent sx={{maxWidth:400}}>
+  <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
@@ -115,16 +150,11 @@ const Item = styled(Paper)(({ theme }) => ({
             </Grid>
           </Box>
         </Box>
-      </Container> */}
+      </Container>
+  </CardContent>
+</Grid>
 
-    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} justifyContent="center">
-      <Grid item xs={3}>
-        <Item>1</Item>
-      </Grid>
-      <Grid item xs={3}>
-        <Item>2</Item>
-      </Grid>
-    </Grid>
+</Grid>
 
     </ThemeProvider>
   );
