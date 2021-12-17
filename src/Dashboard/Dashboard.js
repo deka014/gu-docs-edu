@@ -16,6 +16,7 @@ import Container from '@mui/material/Container'
 // import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
+import ClickAwayListener from '@mui/base/ClickAwayListener'
 import { mainListItems, secondaryListItems } from './listItems'
 
 // function Copyright(props) {
@@ -71,12 +72,16 @@ const mdTheme = createTheme()
 const DashboardContent = (props) => {
   const [open, setOpen] = React.useState(true)
   const toggleDrawer = () => {
+    // console.log(e)
     setOpen(!open)
   }
   // const [category, setCategory] = React.useState('1st Semester')
-  // const refContainer = useRef('null')
 
-  console.log(props)
+  const handleClickAway = () => {
+    setOpen(false)
+    console.log('pressed')
+    // console.log('getting pressed')
+  }
 
   // const handleDashboardClick = (data) => {
   //   setCategory(data)
@@ -87,35 +92,38 @@ const DashboardContent = (props) => {
       <ThemeProvider theme={mdTheme}>
         <Box sx={{ display: 'flex' }}>
           <CssBaseline />
-          <AppBar position='static' open={open}>
-            <Toolbar
-              sx={{
-                pr: '24px', // keep right padding when drawer closed
-              }}
-            >
-              <IconButton
-                edge='start'
-                color='inherit'
-                aria-label='open drawer'
-                onClick={toggleDrawer}
+          <ClickAwayListener onClickAway={handleClickAway}>
+            <AppBar position='static' open={open}>
+              <Toolbar
                 sx={{
-                  marginRight: '36px',
-                  ...(open && { display: 'none' }),
+                  pr: '24px', // keep right padding when drawer closed
                 }}
               >
-                <MenuIcon />
-              </IconButton>
-              <Typography
-                component='h1'
-                variant='h6'
-                color='inherit'
-                noWrap
-                sx={{ flexGrow: 1 }}
-              >
-                Code Junkie Notes
-              </Typography>
-            </Toolbar>
-          </AppBar>
+                <IconButton
+                  edge='start'
+                  color='inherit'
+                  aria-label='open drawer'
+                  onClick={toggleDrawer}
+                  sx={{
+                    marginRight: '36px',
+                    ...(open && { display: 'none' }),
+                  }}
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Typography
+                  component='h1'
+                  variant='h6'
+                  color='inherit'
+                  noWrap
+                  sx={{ flexGrow: 1 }}
+                >
+                  Code Junkie Notes
+                </Typography>
+              </Toolbar>
+            </AppBar>
+          </ClickAwayListener>
+
           <Drawer variant='permanent' open={open}>
             <Toolbar
               sx={{
