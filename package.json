@@ -2,7 +2,7 @@
   "name": "main",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://gitname.github.io/gu-docs-edu",
+  "homepage": "http://gitname.github.io/gu-docs-edu/",
   "dependencies": {
     "@emotion/react": "^11.7.0",
     "@emotion/style": "^0.8.0",
