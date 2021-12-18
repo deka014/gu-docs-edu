@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/gu-docs-edu/static/css/main.e4bbce7f.chunk.css",
-    "main.js": "/gu-docs-edu/static/js/main.5f3632d6.chunk.js",
-    "main.js.map": "/gu-docs-edu/static/js/main.5f3632d6.chunk.js.map",
+    "main.js": "/gu-docs-edu/static/js/main.bb51b029.chunk.js",
+    "main.js.map": "/gu-docs-edu/static/js/main.bb51b029.chunk.js.map",
     "runtime-main.js": "/gu-docs-edu/static/js/runtime-main.7a627c11.js",
     "runtime-main.js.map": "/gu-docs-edu/static/js/runtime-main.7a627c11.js.map",
-    "static/js/2.91dedaff.chunk.js": "/gu-docs-edu/static/js/2.91dedaff.chunk.js",
-    "static/js/2.91dedaff.chunk.js.map": "/gu-docs-edu/static/js/2.91dedaff.chunk.js.map",
+    "static/js/2.e926dbc0.chunk.js": "/gu-docs-edu/static/js/2.e926dbc0.chunk.js",
+    "static/js/2.e926dbc0.chunk.js.map": "/gu-docs-edu/static/js/2.e926dbc0.chunk.js.map",
     "index.html": "/gu-docs-edu/index.html",
     "static/css/main.e4bbce7f.chunk.css.map": "/gu-docs-edu/static/css/main.e4bbce7f.chunk.css.map",
-    "static/js/2.91dedaff.chunk.js.LICENSE.txt": "/gu-docs-edu/static/js/2.91dedaff.chunk.js.LICENSE.txt"
+    "static/js/2.e926dbc0.chunk.js.LICENSE.txt": "/gu-docs-edu/static/js/2.e926dbc0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7a627c11.js",
-    "static/js/2.91dedaff.chunk.js",
+    "static/js/2.e926dbc0.chunk.js",
     "static/css/main.e4bbce7f.chunk.css",
-    "static/js/main.5f3632d6.chunk.js"
+    "static/js/main.bb51b029.chunk.js"
   ]
 }
