@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/gu-docs-edu/static/css/main.50ebd7d8.chunk.css",
-    "main.js": "/gu-docs-edu/static/js/main.ed771a89.chunk.js",
-    "main.js.map": "/gu-docs-edu/static/js/main.ed771a89.chunk.js.map",
+    "main.js": "/gu-docs-edu/static/js/main.cddb2e5a.chunk.js",
+    "main.js.map": "/gu-docs-edu/static/js/main.cddb2e5a.chunk.js.map",
     "runtime-main.js": "/gu-docs-edu/static/js/runtime-main.7a627c11.js",
     "runtime-main.js.map": "/gu-docs-edu/static/js/runtime-main.7a627c11.js.map",
     "static/js/2.b827c754.chunk.js": "/gu-docs-edu/static/js/2.b827c754.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.7a627c11.js",
     "static/js/2.b827c754.chunk.js",
     "static/css/main.50ebd7d8.chunk.css",
-    "static/js/main.ed771a89.chunk.js"
+    "static/js/main.cddb2e5a.chunk.js"
   ]
 }
