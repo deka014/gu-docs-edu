@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useRef } from 'react'
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles'
+import {Link} from "react-router-dom"
 import CssBaseline from '@mui/material/CssBaseline'
 import MuiDrawer from '@mui/material/Drawer'
 import Box from '@mui/material/Box'
@@ -118,8 +119,11 @@ const DashboardContent = (props) => {
                   noWrap
                   sx={{ flexGrow: 1 }}
                 >
+                  <Link to="/" className = 'linkStyle'>
                   Code Junkie Notes
+                  </Link>
                 </Typography>
+               
               </Toolbar>
             </AppBar>
           </ClickAwayListener>

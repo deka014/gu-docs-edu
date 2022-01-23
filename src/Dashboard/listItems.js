@@ -1,4 +1,5 @@
 import * as React from 'react'
+import {Link} from "react-router-dom"
 import ListItem from '@mui/material/ListItem'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
@@ -11,7 +12,7 @@ import LayersIcon from '@mui/icons-material/Layers'
 
 export const mainListItems = (
   <div>
-    <ListItem button>
+    <ListItem button >
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
@@ -77,5 +78,13 @@ export const secondaryListItems = (
       </ListItemIcon>
       <ListItemText primary='Internships' />
     </ListItem>
+    <Link to="/signup" className='linkStyle'>
+    <ListItem button>
+      <ListItemIcon>
+        <LayersIcon />
+      </ListItemIcon>
+      <ListItemText primary='SignUp' />
+    </ListItem>
+    </Link>
   </div>
 )

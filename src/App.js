@@ -11,8 +11,8 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route exact path='/gu-docs-edu' element={<Homepage />} />
-        <Route path='/gu-docs-edu/signup' element={<Signup />} />
+        <Route exact path='/' element={<Homepage />} />
+        <Route path='/signup' element={<Signup />} />
       </Routes>
     </div>
   )
